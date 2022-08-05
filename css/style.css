@@ -1,0 +1,677 @@
+*{
+    /* Set up the font and color of text*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+#header{     
+    /* css for the header part */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-bottom: white 3px solid;
+}
+
+#header a{
+    /* modify the text for the links */
+    font-size: 4vh;
+}
+#header > a:first-of-type{
+    font-size: 5vh;
+}
+
+
+#headeroptions{
+    /* options on for other pages */
+    margin: 0;
+    padding: 0;
+    display:flex;
+}
+
+div#headeroptions ul{
+    display: flex;
+    padding: 0;
+}
+
+div#headeroptions li{
+    list-style: none;
+    padding: 3px;
+}
+
+div#headeroptions li :hover {
+    color: black;
+    background-color: white;
+}
+
+div#headeroptions li a{
+    text-decoration: none;
+    display: block;
+    padding: 1vh;
+}
+
+
+#footer
+{
+    background-color: black;
+    border-top: 3px white solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#footer > a{
+    margin-left: 90vw;
+    margin-top: 1vh;
+}
+
+#footer > div{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    width: 99vw;
+}
+
+#footer > div > div > div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+#footer > div a{
+    text-decoration: none;
+}
+
+#footer > div a:hover{
+    text-decoration: underline;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 2vh;
+    right: 3vw;
+    display: none;
+    flex-direction: column;
+    align-content: space-between;
+    width: 30px;
+    height: 30px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius : 10px;
+    margin: 3px;
+}
+
+.margin{ /* give the element a margin at top*/
+    margin-top: 2vh;
+}
+
+.fitwidth{ /*fits the element to the width of the page*/
+    width: 100vw;
+}
+
+.semitransparentbg{ /*give the element a transparent black background*/
+    background-color: rgba(0,0,0,0.6);
+}
+
+.button{
+
+    padding: 3px;
+    background-color: black;
+    border: 3px white solid;
+    text-decoration: none;
+}
+
+.section{
+    background-size: cover;
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+h1 {
+    font-size: 6vh;
+}
+
+h2 {
+    font-size: 4.7vh;
+}
+
+h3{
+    font-size: 3.5vh;
+}
+
+p{
+    font-size: 2.5vh;
+}
+
+@media screen and (max-width: 1440px)
+{
+    /*Change the header section to have the burger menu*/
+    #headeroptions{
+        display: none;
+        width: 100%;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    #header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #headeroptions ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    #headeroptions li{
+        text-align: center;
+    }
+    #headeroptions a{
+        padding: 1vh 0.5vw;
+    }
+    #headeroptions.active {
+        display: flex;
+    }
+    #footer > a{
+        margin-right: 5vw;
+        margin-left: 70vw;
+    }
+}
+
+@media screen and (max-width:720px) {
+    #footer > div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* the css above are universal across all pages */
+
+/*these css with #main-<> is for the index.html page*/
+#main-main{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 100vw;
+}
+
+#main-main #main-header {
+    background-image: url('../images/solarpanelbanner.jpg');
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#main-main #main-header > div{
+    width: 39%;
+    padding: 1vw;
+    text-align: center;
+    margin-left: 8vw;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 2vh;
+}
+
+#main-main div > a{
+    font-size: 2vw;
+    margin: 2vh 4vh;
+}
+
+#main-main div#section1{
+    background-image: url('../images/solarpanelbg1.jpg');
+    justify-content: flex-end;
+    height: 35vh;
+    margin-top: 2vh;
+}
+
+#main-main div#section1 > div{
+    width: 100%;
+    margin: 0vh 2vw 0vh 35vw;
+    padding: 1vh;
+}
+
+#main-main div#section2{
+    background-image: url('../images/solarpanelbg2.jpg');
+    justify-content: flex-start;
+    height: 35vh;
+}
+
+#main-main div#section2 > div{
+    width: 100%;
+    margin: 0vh 35vw 0vh 2vw;
+    padding: 1vh;
+}
+
+#main-main div#section3{
+    background-image: url('../images/solarpanelbg3.jpg');
+    justify-content: flex-end;
+    height: 35vh;
+}
+
+#main-main div#section3 > div{
+    width: 100%;
+    margin: 0vh 2vw 0vh 30vw;
+    padding: 1vh;
+}
+
+@media screen and (max-width:1440px) { /*For tablets*/            
+
+    #main-main div#main-header > div{
+        width: 100%;
+        margin: 0;
+        border-bottom: 3px white solid;
+    }
+
+    #main-main div#section1{
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row;
+        border-bottom: 3px white solid;
+    }
+
+    #main-main div#section1 > div{
+        height: 31vh;
+        margin: 0;
+        padding: 2vh;
+    }
+
+    #main-main div#section1 > a{
+        width:  13vw;
+    }
+
+    #main-main div#section2{
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row-reverse;
+        border-bottom: 3px white solid;
+    }
+
+    #main-main div#section2 > div{
+        height: 31vh;
+        margin: 0;
+        padding: 2vh;
+    }
+
+    #main-main div#section2 > a {
+        width: 13vw;
+    }
+
+    #main-main div#section3{
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row;
+    }
+
+    #main-main div#section3 > div{
+        height: 31vh;
+        margin: 0;
+        padding: 2vh;
+    }
+
+    #main-main div#section3 > a {
+        width: 13vw;
+    }
+}
+
+@media screen and (max-width:720px) { /*For moblie*/
+    #main-main div#section3 > div{
+        height: 34vh;
+        margin: 0;
+        padding: 0vh 1vh 1vh 1vh;
+    }
+    #main-main div#section1 > div{
+        height: 34vh;
+        margin: 0;
+        padding: 0vh 1vh 1vh 1vh;
+    }
+}
+
+
+/* below css is for the impacts paage */
+
+#impact-main #main-header {
+    background-image: url('../images/carbonemmissionsbanner.jpg');
+    height: 85vh;
+    display: flex;
+    justify-content: flex-end;
+    background-size: cover;
+    align-content: stretch;
+}
+
+#impact-main #main-header > div{
+    width: 39%;
+    padding: 1vw;
+    text-align: center;
+    margin-right: 8vw;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 2vh;
+}
+
+#impact-main div.section{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 3px white solid;
+}
+
+
+#impact-main > div > h2{
+    margin: 0;
+    text-decoration: underline;
+}
+
+#impact-main > div.section > div{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row;
+    align-items: center;
+    height: 33vh;
+}
+
+#impact-main div.section > div.flex
+{
+    display: flex;
+}
+
+#impact-main div.section > div.hide{
+    display: none;
+}
+
+#impact-main > div.section > div > div
+{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+
+#impact-main > div.section h3{
+    text-align: center;
+}
+
+#impact-main > div.section > div > div > p {
+    text-align: center;
+}
+
+#impact-main > div.section img{
+    height: 33vh;
+}
+
+#impact-main > div.section :nth-child(4){ /*Set the second point of the impacts to opposite flex direction*/
+    flex-direction: row-reverse;
+}
+
+.noshow{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+#impact-click{
+    font-size: 2.5vh;
+}
+
+@media screen and (max-width:1440px) {
+    
+    #impact-main > div#main-header > div{
+        width: 100%;
+        margin: 0;
+        border-bottom: 3px white solid;
+        flex-direction: column;
+    }
+    
+    #impact-main > div.section > div {
+        height: 45vh;
+    }
+    
+    .section{
+        width: 97vw;
+    }
+}
+
+@media screen and (max-width:720px) { 
+    #impact-main div.section  div{
+        flex-direction: column;
+    }
+    #impact-main > div.section > div {
+        height: 75vh;
+    }
+    #impact-main > div.section :nth-child(3){ 
+        flex-direction: column;
+    }
+    #impact-main > div.section :nth-child(4){ /*Set the second point of the impacts to opposite flex direction*/
+        flex-direction: column;
+    }
+}
+
+
+/* SG problems page */
+#problems-main #problems-header{
+    background-image: url("../images/sgimage.jpeg");
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    background-size: cover;
+    align-content: stretch;
+}
+
+#problems-main #problems-header > div{
+    width: 39%;
+    padding: 1vw;
+    text-align: center;
+    margin-right: 8vw;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 2vh;
+}
+
+#problems-main div.section{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row;
+    align-items: center;
+    height: 33vh;
+}
+
+#problems-main div.section > img{
+    height: 33vh;
+}
+
+#problems-main div.section > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+#problems-main div.section > div > div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+@media screen and (max-width:1440px) {
+    
+    #problems-main > div#problems-header > div{
+        width: 100%;
+        margin: 0;
+        border-bottom: 3px white solid;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1100px) { 
+    #problems-main > div.section:nth-of-type(2){
+        flex-flow: column;
+        height: 60vh;
+    }
+
+    #problems-main > div.section:last-of-type{
+        flex-flow: column-reverse;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:1000px)
+{
+    #problems-main > div.section:nth-of-type(2){
+        height: 65vh;
+    }
+
+    #problems-main > div.section:last-of-type{
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width:720px) { 
+    #problems-main > div.section:nth-of-type(2){
+        height: 75vh;
+    }
+
+    #problems-main > div.section:last-of-type{
+        height: 75vh;
+    }
+}
+
+/* This part covers all the css for the how it works page. */
+#work-header{
+    background-image: url("../images/solar-panel-manufacturing-line.jpg");
+    height: 85vh;
+    display: flex;
+    justify-content: flex-end;
+    background-size: cover;
+    align-content: stretch;
+}
+
+#work-header > div{
+    width: 39%;
+    padding: 1vw;
+    text-align: center;
+    margin-right: 8vw;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 2vh;
+}
+
+#work-section-1{
+    height: 68vh;
+    background-image: url("../images/made-of.png");
+    background-size:cover;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+}
+
+#work-section-1 > div{
+    width: 39%;
+    padding: 1vw;
+    text-align: center;
+    margin-right: 8vw;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 2vh;
+}
+
+#work-section-2{
+    height: 50vh;
+    justify-content: center;
+    align-content: space-around;
+}
+
+#work-section-2 > h2{
+    padding: 0;
+    margin: 0;
+}
+
+#work-section-2 > div {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#work-section-2 > a{
+    margin-right: 5px;
+    font-size: 3vh;
+}
+
+#conveyor {
+    background-color: grey;
+    height: 12vh;
+    width: 100vw;
+}
+
+#conveyor > div:nth-child(1)
+{
+    width: 100%;
+    height: 100%;
+}
+
+#conveyor > div:nth-child(3){
+    position: absolute;
+    height: 15vh;
+    width: 190px;
+    background-color: darkgray;
+}
+
+#conveyor > div:nth-child(2){
+    position: absolute;
+    height: 15vh;
+    width: 190px;
+    background-color: darkgray;
+    left: 89vw;
+}
+
+#table{
+    height: 10vh;
+    width: 20vw;
+    background-color: grey;
+}
+
+#work-section-3{
+    height: 68vh;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+#work-section-3 > div{
+    padding: 1vw;
+    text-align: center;
+    margin-left: 8vw;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 2vh;
+}

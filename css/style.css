@@ -64,6 +64,7 @@ div#headeroptions li a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-bottom: 5vh;
 }
 
 #footer > a{
@@ -165,6 +166,7 @@ p{
     }
     .toggle-button {
         display: flex;
+        justify-content: space-between;
     }
     #header{
         flex-direction: column;
@@ -228,8 +230,8 @@ p{
 }
 
 #main-main div > a{
-    font-size: 2vw;
-    margin: 2vh 4vh;
+    font-size: 3vh;
+    margin: 1vh 1vh;
 }
 
 #main-main div#section1{
@@ -282,16 +284,17 @@ p{
         align-items: center;
         flex-flow: row;
         border-bottom: 3px white solid;
+        height: 40vh;
     }
 
     #main-main div#section1 > div{
-        height: 31vh;
+        height: 36vh;
         margin: 0;
         padding: 2vh;
     }
 
     #main-main div#section1 > a{
-        width:  13vw;
+        width:  19vw;
     }
 
     #main-main div#section2{
@@ -299,43 +302,62 @@ p{
         align-items: center;
         flex-flow: row-reverse;
         border-bottom: 3px white solid;
+        height: 40vh;
     }
 
     #main-main div#section2 > div{
-        height: 31vh;
+        height: 36vh;
         margin: 0;
         padding: 2vh;
     }
 
     #main-main div#section2 > a {
-        width: 13vw;
+        width: 19vw;
     }
 
     #main-main div#section3{
         justify-content: space-around;
         align-items: center;
         flex-flow: row;
+        height: 40vh;
     }
 
     #main-main div#section3 > div{
-        height: 31vh;
+        height: 36vh;
         margin: 0;
         padding: 2vh;
     }
 
     #main-main div#section3 > a {
-        width: 13vw;
+        width: 19vw;
     }
 }
 
 @media screen and (max-width:720px) { /*For moblie*/
+    #main-main div#section1{
+        height: 45vh;
+    }
+
+    #main-main div#section2{
+        height: 45vh;
+    }
+    #main-main div#section3{
+        height: 45vh;
+    }
+
+    #main-main div#section2 > div{
+        height: 37vh;
+        margin: 0;
+        padding: 2vh;
+    }
+
     #main-main div#section3 > div{
-        height: 34vh;
+        height: 41vh;
         margin: 0;
         padding: 0vh 1vh 1vh 1vh;
     }
     #main-main div#section1 > div{
-        height: 34vh;
+        height: 41vh;
         margin: 0;
         padding: 0vh 1vh 1vh 1vh;
     }
@@ -351,6 +373,7 @@ p{
     justify-content: flex-end;
     background-size: cover;
     align-content: stretch;
+    margin-bottom: 2vh;
 }
 
 #impact-main #main-header > div{
@@ -469,11 +492,11 @@ p{
 #problems-main #problems-header{
     background-image: url("../images/sgimage.jpeg");
     height: 85vh;
-    width: 100vw;
     display: flex;
     justify-content: flex-end;
     background-size: cover;
     align-content: stretch;
+    margin-bottom: 2vh;
 }
 
 #problems-main #problems-header > div{
@@ -497,8 +520,10 @@ p{
 }
 
 #problems-main div.section > img{
-    height: 33vh;
+    width: 500px;
+    height: 300px;
 }
+
 
 #problems-main div.section > div{
     display: flex;
@@ -546,6 +571,11 @@ p{
     #problems-main > div.section:last-of-type{
         height: 65vh;
     }
+    
+    #problems-main div.section > img{
+        width: 400px;
+        height: 240px;
+    }
 }
 
 @media screen and (max-width:720px) { 
@@ -555,6 +585,12 @@ p{
 
     #problems-main > div.section:last-of-type{
         height: 75vh;
+    }
+
+    
+    #problems-main div.section > img{
+        width: 300px;
+        height: 180px;
     }
 }
 

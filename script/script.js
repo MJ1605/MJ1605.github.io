@@ -349,6 +349,7 @@ if ( document.URL.includes("howitwork.html") ) {
     var third = false;
     var fourth = false;
 
+    //setup the images
     var time = 0;
     image.style.left = document.body.clientWidth * 0.91 + 'px';
     image.addEventListener('click', () => {

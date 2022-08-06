@@ -298,13 +298,17 @@ function showCoords(event) {
 
 if ( document.URL.includes("howitwork.html") ) {
 
-
+  var multiplier = 1;
+  if (document.body.clientWidth < 550)
+  {
+    multiplier = 0.5;
+  }
   //create the images for the conveyor belt
   var image = document.createElement('img');
   image.src = "../images/Aluminium.png"
   image.style.position = "absolute";
-  image.style.height = "10vh";
-  image.style.width = "180px";
+  image.style.height = 10 * multiplier + 'vh';
+  image.style.width = 180 * multiplier + 'px';
   image.style.backgroundColor = "white";
   image.style.left = 0;
 
@@ -313,8 +317,8 @@ if ( document.URL.includes("howitwork.html") ) {
   var image2 = document.createElement('img');
   image2.src = "../images/glass-panel.jpeg"
   image2.style.position = "absolute";
-  image2.style.height = "10vh";
-  image2.style.width = "180px";
+  image2.style.height = 10 * multiplier + 'vh';
+  image2.style.width = 180 * multiplier + 'px';
   image2.style.backgroundColor = "white";
   image2.style.left = 0;
 
@@ -323,8 +327,8 @@ if ( document.URL.includes("howitwork.html") ) {
   var image3 = document.createElement('img');
   image3.src = "../images/plastic.png"
   image3.style.position = "absolute";
-  image3.style.height = "10vh";
-  image3.style.width = "180px";
+  image3.style.height = 10 * multiplier + 'vh';
+  image3.style.width = 180 * multiplier + 'px';
   image3.style.backgroundColor = "white";
   image3.style.left = 0;
 
@@ -333,14 +337,14 @@ if ( document.URL.includes("howitwork.html") ) {
   var image4 = document.createElement('img');
   image4.src = "../images/silicon.jpg"
   image4.style.position = "absolute";
-  image4.style.height = "10vh";
-  image4.style.width = "180px";
+  image4.style.height = 10 * multiplier + 'vh';
+  image4.style.width = 180 * multiplier + 'px';
   image4.style.backgroundColor = "white";
   image4.style.left = 0;
 
   document.getElementById("conveyor").getElementsByTagName('div')[0].appendChild(image4);
 
-  document.getElementById('conveyor').getElementsByTagName('div')[1].style.left = document.body.clientWidth - 190 + 'px';
+  document.getElementById('conveyor').getElementsByTagName('div')[1].style.left = document.body.clientWidth - 190 * multiplier + 'px';
 
   //deal the first minigame
   document.getElementById("work-section-2").getElementsByTagName('a')[0].addEventListener('click', () => {
@@ -349,9 +353,13 @@ if ( document.URL.includes("howitwork.html") ) {
     var third = false;
     var fourth = false;
 
+    if (multiplier == 0.5)
+    {
+      multiplier = 0.25
+    }
     //setup the images
     var time = 0;
-    image.style.left = document.body.clientWidth * 0.91 + 'px';
+    image.style.left = document.body.clientWidth * (0.95 - 0.05 * (1 /multiplier))  + 'px';
     image.addEventListener('click', () => {
       if (first == false)
       {
@@ -360,7 +368,7 @@ if ( document.URL.includes("howitwork.html") ) {
       }
     })
     
-    image2.style.left = document.body.clientWidth * 0.91 + 'px';
+    image2.style.left = document.body.clientWidth * (0.95 - 0.05 * (1 /multiplier))  + 'px';
     image2.addEventListener('click', () => {
       if (second == false)
       {
@@ -368,7 +376,7 @@ if ( document.URL.includes("howitwork.html") ) {
         image2.style.left = 0;
       }
     })
-    image3.style.left = document.body.clientWidth * 0.91 + 'px';
+    image3.style.left = document.body.clientWidth * (0.95 - 0.05 * (1 /multiplier))  + 'px';
     image3.addEventListener('click', () => {
       if (third == false)
       {
@@ -376,7 +384,7 @@ if ( document.URL.includes("howitwork.html") ) {
         image3.style.left = 0;
       }
     })
-    image4.style.left = document.body.clientWidth * 0.91 + 'px';
+    image4.style.left = document.body.clientWidth * (0.95 - 0.05 * (1 /multiplier)) + 'px';
     image4.addEventListener('click', () => {
       if (fourth == false)
       {
@@ -434,13 +442,13 @@ if ( document.URL.includes("howitwork.html") ) {
         if (third == true)
         {
           run = false;
-          document.getElementById("work-section-2").getElementsByTagName('p')[0].classList.toggle('noshow');
+          document.getElementById("work-section-2").getElementsByTagName('p')[1].classList.toggle('noshow');
         }
 
         if (first == true && second == true && fourth == true)
         {
           run = false;
-          document.getElementById("work-section-2").getElementsByTagName('p')[1].classList.toggle('noshow');
+          document.getElementById("work-section-2").getElementsByTagName('p')[2].classList.toggle('noshow');
         }
       }
     }, 20, 1);

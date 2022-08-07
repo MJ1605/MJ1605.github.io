@@ -250,6 +250,7 @@ p{
     background-image: url('../images/solarpanelbg2.jpg');
     justify-content: flex-start;
     height: 35vh;
+    width: 98vw;
 }
 
 #main-main div#section2 > div{
@@ -449,7 +450,7 @@ p{
     display: flex;
 }
 
-#impact-click{
+.impact-click{
     font-size: 2.5vh;
 }
 

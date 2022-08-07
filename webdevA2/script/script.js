@@ -1,7 +1,7 @@
 // from line 2 to 8, is to toggle the navbar from and to hamburger menu. 
-const toggleButton = document.getElementsByClassName('toggle-button')[0];
+var toggleButton = document.getElementsByClassName('toggle-button')[0];
 
-const navbarLinks = document.getElementById('headeroptions');
+var navbarLinks = document.getElementById('headeroptions');
 
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
